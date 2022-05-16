@@ -59,7 +59,8 @@ public class VEZBA {
         };
 
        String razmak = "*";
-     //  imageArray = razmak.replaceAll(" "," *"  );
+
+       String result = razmak.replaceAll("a", " b");
 
         List<String> image = Arrays.asList(imageArray);
 
