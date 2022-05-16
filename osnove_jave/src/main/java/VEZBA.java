@@ -1,7 +1,6 @@
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
-import java.util.Replace
+
 
 public class VEZBA {
     public static void main(String[] args) {
@@ -59,6 +58,9 @@ public class VEZBA {
                 "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", ".", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", ".", "@", "@", "@", "@", "@", "@", "%", "+", "=", "-", "-", "-", "=", "@", "=", "-", "-", "+", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", " ", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@", "-", "@", "@", "@", "@", "@", "@", "@", "@", "@", "@",
         };
 
+       String razmak = "*";
+     //  imageArray = razmak.replaceAll(" "," *"  );
+
         List<String> image = Arrays.asList(imageArray);
 
         for (int i = 0; i < image.size(); i++) {
@@ -67,14 +69,6 @@ public class VEZBA {
                 System.out.println();
             }
         }
-        public class ReplaceSpace {
 
-
-                char ch = '-';
-
-                imageArray = imageArray.replace(' ', ch);
-               // System.out.println("String after replacing spaces with given character: ");
-
-        }
     }
 }
