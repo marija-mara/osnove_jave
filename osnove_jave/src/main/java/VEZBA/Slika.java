@@ -1,8 +1,10 @@
+package VEZBA;
+
 import java.util.Arrays;
 import java.util.List;
 
 
-public class VEZBA {
+public class Slika {
     public static void main(String[] args) {
 
         String[] imageArray = new String[]{
