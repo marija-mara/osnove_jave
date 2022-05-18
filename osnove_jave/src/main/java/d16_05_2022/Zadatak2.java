@@ -9,9 +9,10 @@ public class Zadatak2 {
         novaVrednost(6,2);
     }
 
-    static void novaVrednost(int a,int b) {
+    static int novaVrednost(int a,int b) {
         System.out.print(a);
         System.out.print(b);
         System.out.println();
+        return 0;
     }
 }
