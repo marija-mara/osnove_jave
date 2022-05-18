@@ -54,7 +54,9 @@ public class ITBootcamp {
         int brstrane = s.nextInt();
         System.out.print("Unesi broj rezultata po stani: ");
         int brojRez = s.nextInt();
-        for (int i = brojRez * (brstrane - 1); i < brojRez * (brstrane - 1) + brojRez; i++) {
+
+        int start = brojRez * (brstrane - 1);
+        for (int i = start; i < start + brojRez; i++) {
             System.out.println(tekst.get(i));
         }
 
