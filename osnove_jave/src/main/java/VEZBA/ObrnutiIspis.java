@@ -9,9 +9,9 @@ public class ObrnutiIspis {
         }
     }
     static String obrni(String rec){
-        String obrnutaRec = " ";
+        String obrnutaRec = "";
         for (int i = rec.length() - 1; i >= 0; i--) {
-           obrnutaRec += (rec.charAt(i));
+           obrnutaRec += (rec.charAt(i));//spojila string
         }
         return obrnutaRec;
     }
