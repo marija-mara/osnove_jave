@@ -9,9 +9,14 @@ public class autoMain {
         fica.brVrata = 5;
         fica.potrosnaNa100km = 10;
         fica.trenutnaBrzina = 55;
-        fica.stampaj();
-        fica.brojRegistracije="-898--9989";
-        fica.klimaJeUkljucena=true;
+//        fica.stampaj();
+        fica.brojRegistracije = "-898--9989";
+        fica.klimaJeUkljucena = true;
+        fica.doKadaJeRegMesec = 10;
+        fica.kubikaza = 2000;
+        fica.godinaProizvodnje=1954;
+fica.kapRez=50;
+fica.trKolGor=3;
 
         fica.dodajGas();
         fica.dodajGas();
@@ -20,30 +25,22 @@ public class autoMain {
         System.out.println(fica.trenutnaBrzina);
         fica.koci();
         System.out.println(fica.trenutnaBrzina);
-        double x= fica.potrosnjaAuta();
+        double x = fica.potrosnjaAuta();
         System.out.println(x);
-
-
-
-        if(fica.prekoracio(90)){
+        if (fica.prekoracio(90)) {
             System.out.println("kazna je :" + fica.kazna(90));
         }
+         if (fica.oldtajmer()) {
+             System.out.println("auto je oldtajmer");
+         }
+
+         if(fica.isteklaReg(7)) {
+             System.out.println("registracija istekla");
+         }
+
+        System.out.println("cena registracije je: " + fica.cenaReg());
 
 
 
-//        boolean jeste=fica.prekoracio(50);
-//        System.out.println("Da li je prekoracio: " + jeste );
-//
-//        int kazna = fica.kazna(50);
-//        System.out.println("Kazna je: " + kazna);
-
-//
-//        Auto b = new Auto();
-//        b.imeIprezime = "Milan i Vlada";
-//        b.markaAuta = "svermirski";
-//        b.brVrata = 100;
-//        b.potrosnaNa100km = -5;
-//        b.trenutnaBrzina = 30000;
-//        b.stampaj();
     }
 }

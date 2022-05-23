@@ -1,5 +1,4 @@
 package p19_05_2022;
-
 //Kreirati klasu Auto koja ima:
 //ime i prezime vozaca
 //marku automobila
@@ -28,6 +27,12 @@ public class Auto {
     public String brojRegistracije;
     public boolean klimaJeUkljucena;
 
+    public int godinaProizvodnje;
+    public int doKadaJeRegMesec;
+    public int kubikaza;
+    public int kapRez;
+    public double trKolGor;
+
     //F4 skociti u metodu iz mejna
     public void stampaj() {
         System.out.println(this.imeIprezime);
@@ -38,29 +43,14 @@ public class Auto {
     }
 
     public boolean prekoracio(int ogranicenje) {
-
         return this.trenutnaBrzina > ogranicenje;
-
-//        if (this.trenutnaBrzina > ogranicenje) {
-//            return true;
-//        } else {
-//            return false;
-//        }
     }
 
     public int kazna(int ogranicenje) {
-
         if (this.prekoracio(ogranicenje)) {
             return (trenutnaBrzina - ogranicenje) * 1000;
         }
         return 0;
-
-//        if (this.trenutnaBrzina > ogranicenje) {
-//            iznos = (this.trenutnaBrzina - ogranicenje) * 1000;
-//            return iznos;
-//        } else {
-//            return 0;
-//        }
     }
 
     public void dodajGas() {
@@ -68,9 +58,9 @@ public class Auto {
     }
 
     public void koci() {
-        this.trenutnaBrzina=trenutnaBrzina-10;
-      if (trenutnaBrzina<10) {
-            trenutnaBrzina=0;
+        this.trenutnaBrzina = trenutnaBrzina - 10;
+        if (trenutnaBrzina < 10) {
+            trenutnaBrzina = 0;
         }
     }
 
@@ -79,6 +69,32 @@ public class Auto {
             return ((trenutnaBrzina / 100.0) * this.potrosnaNa100km) * 1.2;
         }
         return ((trenutnaBrzina / 100.0) * this.potrosnaNa100km) * 1.0;
+    }
+
+    public boolean oldtajmer() {
+        return godinaProizvodnje < 1950;
+    }
+
+    public boolean isteklaReg(int trenutnimesec) {
+        return trenutnimesec > doKadaJeRegMesec;
+    }
+
+    public double cenaReg() {
+        if (kubikaza < 200) {
+            return this.kubikaza * 100;
+        }
+        return this.kubikaza * 100 * 1.3;
+    }
+
+    public double natociGorivo(double kolicina) {
+        if (trKolGor + kolicina <= kapRez) {
+            return kolicina * 170;
+        } else if (trKolGor < kapRez) {
+            {
+                return 0;
+            }
+        }
+        return -1;
     }
 }
 
