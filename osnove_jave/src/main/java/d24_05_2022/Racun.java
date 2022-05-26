@@ -3,7 +3,7 @@ package d24_05_2022;
 public class Racun {
     private String brRacuna;
     private String imeIprezime;
-    private int stanje;
+    private double stanje;
 
     public Racun() {
 
@@ -23,7 +23,7 @@ public class Racun {
         return imeIprezime;
     }
 
-    public int getStanje() {
+    public double getStanje() {
         return stanje;
     }
 
@@ -35,13 +35,20 @@ public class Racun {
         this.imeIprezime = imeIprezime;
     }
 
-    public void menjaStanje(int iznos) {
-        int novoStanje = stanje - iznos;
-        stanje =  novoStanje < 0 ? stanje : novoStanje;
+    public boolean promeniStanje(double iznos) {
+        double novoStanje = stanje + iznos;
+
+        if (novoStanje < 0) {
+            return false;
+        }
+
+        stanje = novoStanje;
+        return true;
     }
 
     public void stampa() {
-        System.out.println("ime i prezime: " + imeIprezime + " - " + brRacuna);
+        System.out.println(imeIprezime + " - " + brRacuna);
         System.out.println("Stanje na racunu je: " + stanje + "rsd");
+
     }
 }

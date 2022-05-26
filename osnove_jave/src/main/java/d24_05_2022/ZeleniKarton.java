@@ -60,7 +60,8 @@ public class ZeleniKarton {
     public boolean polozio(int ocena) {
         return this.ocena > 5 ? true : false;
     }
-    public void stampaj(){
+
+    public void stampaj() {
         System.out.println("Naziv predmeta: " + nazivPredmeta + " - " + ocena);
         System.out.println("Student: " + imeIprezime + ", " + brIndexa);
         System.out.println("Profesor: " + imeProfesora);

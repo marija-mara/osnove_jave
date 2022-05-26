@@ -34,14 +34,30 @@ public class Transakcija {
         this.primalac = primalac;
     }
 
-    private int provizija() {
-        if (racun.suma < 4500) {
+    private double provizija(double transakcija) {
+        if (transakcija < 4500) {
             return 45;
-        } else if (prenos > 4500) {
-            return 1;
+        } else if (transakcija > 4500) {
+            return transakcija * 0.01;
         }
         return 0;
     }
 
+    public void vrsimTransakciju(double vrednost) {
+        if (davaoc.promeniStanje(-vrednost)) {
+            primalac.promeniStanje(+vrednost);
+        } else {
+            System.out.println("Nedovoljno sredstava na racunu " + davaoc.getBrRacuna());
+        }
+
+    }
+
+    public void stampa() {
+        System.out.println("id " + id);
+        System.out.print("Racuna sa: ");
+        this.davaoc.stampa();
+        System.out.print("Racun na: ");
+        this.primalac.stampa();
+    }
 
 }
