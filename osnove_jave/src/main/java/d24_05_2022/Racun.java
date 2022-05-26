@@ -35,8 +35,9 @@ public class Racun {
         this.imeIprezime = imeIprezime;
     }
 
-    public int menjaStajne(int suma) {
-        return this.stanje - suma;
+    public void menjaStanje(int iznos) {
+        int novoStanje = stanje - iznos;
+        stanje =  novoStanje < 0 ? stanje : novoStanje;
     }
 
     public void stampa() {

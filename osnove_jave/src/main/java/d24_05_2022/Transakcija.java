@@ -33,12 +33,14 @@ public class Transakcija {
     public void setPrimalac(Racun primalac) {
         this.primalac = primalac;
     }
-    private int provizija(){
-        if(racun.suma<4500) {
+
+    private int provizija() {
+        if (racun.suma < 4500) {
             return 45;
         } else if (prenos > 4500) {
             return 1;
         }
+        return 0;
     }
 
 
