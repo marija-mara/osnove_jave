@@ -10,9 +10,29 @@ package d18_05_2022;
 public class Proizvod {
     public String naziv;
     public double cena;
-    public double tezina
+    public double tezina;
+
     public void stampaj() {
-        System.out.print("{" + this.naziv + "}," + "{" + this.cena + "}," + "{" + this.tezina + "}");
-        System.out.println();
+        System.out.println("{" + this.naziv + "}," + "{" + this.cena + "}," + "{" + this.tezina + "}");
+    }
+
+    public void povecajCenu(double povecanje) {
+        this.cena += povecanje;
+    }
+
+    public double vratiCenuSaPopustom(double popust) {
+        return this.cena - this.cena * popust / 100;
+    }
+
+    public double racunajPostarinu() {
+        int cenapostarine = 0;
+        if (this.tezina <= 100) {
+            return cenapostarine = 200;
+        } else if (this.tezina >= 101 && this.tezina <= 500) {
+            return cenapostarine = 400;
+        } else if (this.tezina > 500) {
+            return cenapostarine = 1000;
+        }
+        return -1;
     }
 }
