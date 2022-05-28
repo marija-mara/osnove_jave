@@ -13,11 +13,7 @@ public class mainTransakcija {
         Transakcija t2 = new Transakcija(84, r2, r1);
         t2.vrsimTransakciju(5000);
         t2.stampa();
-        System.out.println("************");
 
-        t1.vrsimTransakciju(500);
-        t1.stampa();
-        System.out.println("************");
 
     }
 }
