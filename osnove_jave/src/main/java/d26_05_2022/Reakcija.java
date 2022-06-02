@@ -5,22 +5,28 @@ package d26_05_2022;
 //ime i prezime korisnika koji je reagovao
 //gettere, settere i konstruktore
 public class Reakcija {
-    private String reakcija;
+
+    enum ReakcijaEnum {
+        LIKE,
+        SMILE,
+        SRCE
+    }
+    private ReakcijaEnum reakcija;
     private String imeIprezime;
 
     public Reakcija() {
     }
 
-    public Reakcija(String reakcija, String imeIprezime) {
+    public Reakcija(ReakcijaEnum reakcija, String imeIprezime) {
         this.reakcija = reakcija;
         this.imeIprezime = imeIprezime;
     }
 
-    public String getReakcija() {
+    public ReakcijaEnum getReakcija() {
         return reakcija;
     }
 
-    public void setReakcija(String reakcija) {
+    public void setReakcija(ReakcijaEnum reakcija) {
         this.reakcija = reakcija;
     }
 

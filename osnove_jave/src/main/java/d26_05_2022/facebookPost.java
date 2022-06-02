@@ -36,13 +36,15 @@ public class facebookPost {
     public void reaguj(Reakcija r) {
         for (int i = 0; i < nizReakcija.size(); i++) {
             if (nizReakcija.get(i).getImeIprezime().equals(r.getImeIprezime())) {
-                nizReakcija.remove(r);
+                nizReakcija.remove(r); // i
+
             }
+
         }
         nizReakcija.add(r);
     }
 
-    public int brojReakcija(String tipReakcije) {
+    private int brojReakcija(Reakcija.ReakcijaEnum tipReakcije) {
         int pom = 0;
         for (int i = 0; i < nizReakcija.size(); i++) {
             if (nizReakcija.get(i).getReakcija().equals(tipReakcije)) {
@@ -55,11 +57,11 @@ public class facebookPost {
     public void stampaj() {
         System.out.println(imeAutora);
         System.out.println(teksObjave);
-        System.out.print("Smajli " + brojReakcija("Smajli"));
+        System.out.print("Smajli " + brojReakcija(Reakcija.ReakcijaEnum.SMILE));
         System.out.print(" | ");
-        System.out.print("Like " + brojReakcija("Like"));
+        System.out.print("Like " + brojReakcija(Reakcija.ReakcijaEnum.LIKE));
         System.out.print(" | ");
-        System.out.println("Srce " + brojReakcija("Srce"));
+        System.out.println("Srce " + brojReakcija(Reakcija.ReakcijaEnum.SRCE));
 
     }
 

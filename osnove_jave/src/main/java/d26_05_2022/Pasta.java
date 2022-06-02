@@ -31,15 +31,22 @@ public class Pasta {
     }
 
     public void obrisiSastojak(String naziv){
-        int index = 0;
-
-        for (int i = 0; i < nizSastojaka.size(); i++) {
-            if (nizSastojaka.get(i).getNaziv() == naziv)
+        for (int i = 0; i < this.nizSastojaka.size(); i++) {
+            if(this.nizSastojaka.get(i).getNaziv().equals(naziv))
             {
-                index = i;
+                this.nizSastojaka.remove(i);
             }
         }
 
-        nizSastojaka.remove(index);
+//        int index = 0;
+//
+//        for (int i = 0; i < nizSastojaka.size(); i++) {
+//            if (nizSastojaka.get(i).getNaziv() == naziv)
+//            {
+//                index = i;
+//            }
+//        }
+//
+//        nizSastojaka.remove(index);
     }
 }
