@@ -1,3 +1,5 @@
+package p02_06_2022;
+
 import java.util.ArrayList;
 
 public class mainFigure {
@@ -25,7 +27,7 @@ public class mainFigure {
         for (int i = 0; i < figure.size(); i++) {
             figure.get(i).stampaj();
         }
-        // if(figure.get(i). instance od JednakostranicniTrougao) {
+        // if(figure.get(i). instance od p02_05_2022.JednakostranicniTrougao) {
         //System.out.println(i + "trougao:");
     }
 }

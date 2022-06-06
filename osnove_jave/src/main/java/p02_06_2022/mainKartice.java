@@ -1,4 +1,4 @@
-package p02_05_2022;
+package p02_06_2022;
 
 public class mainKartice {
     public static void main(String[] args) {

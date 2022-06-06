@@ -1,3 +1,5 @@
+package p02_06_2022;
+
 public abstract class Figura {
     public abstract double povrsina();
     public abstract double obim();

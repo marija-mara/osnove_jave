@@ -1,4 +1,6 @@
-public class Pravougaonik extends Figura{
+package p02_06_2022;
+
+public class Pravougaonik extends Figura {
     protected int a;
     protected int b;
 

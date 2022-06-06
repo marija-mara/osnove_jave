@@ -1,4 +1,6 @@
-public class JednakostranicniTrougao extends Figura{
+package p02_06_2022;
+
+public class JednakostranicniTrougao extends Figura {
     private int a;
 
     public int getA() {
