@@ -1,10 +1,9 @@
 package p03_06_2022;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Kasa {
-    Scanner s = new Scanner(System.in);
+
     ArrayList<Sastojak> dodaci = new ArrayList<>();
     ArrayList<Proizvod> proizvodi = new ArrayList<>();
 
