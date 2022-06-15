@@ -26,6 +26,8 @@ public class main {
         story1.dodajDodatak(tag1);
         story1.dodajDodatak(tag2);
         story1.dodajDodatak(tag3);
+        tag1.smanjenjeDimenzija(60, 5);
+        tag2.povecanjeDimenzija(10, 10);
         story1.postaviStori();
         story1.pregledajStory(user2);
         story1.pregledajStory(user3);

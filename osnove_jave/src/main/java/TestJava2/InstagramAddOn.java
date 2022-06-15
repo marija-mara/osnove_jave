@@ -57,7 +57,7 @@ public abstract class InstagramAddOn {
             visinaDodatka -= smanjenjeVisine;
         } else visinaDodatka = minimalnaVisinaDodatka();
 
-        if (minimalnaSirinaDodatka() < sirinaDodatka - smanjenjeVisine) {
+        if (minimalnaSirinaDodatka() < sirinaDodatka - smanjenjeSirine) {
             sirinaDodatka -= smanjenjeSirine;
         } else {
             sirinaDodatka = minimalnaSirinaDodatka();
